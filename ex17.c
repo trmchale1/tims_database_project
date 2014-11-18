@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -28,7 +28,7 @@ void die(const char *message)
 	if(errno) {
 		perror(message);
 	} else {
-		printf("Error: %s\n", message");
+		printf("ERROR: %s\n", message);
 	}
 	exit(1);
 }
@@ -67,4 +67,5 @@ int main (int argc, char *argv[])
 
 	if(argc > 3) id = atoi(argv[3]);
 	if(id >= MAX_ROWS) die("There's not that many records");
+
 }
